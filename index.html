@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AttachLink – Find Your Perfect Attachment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>AttachLink</h1>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav id="navbar">
+        <a href="#" onclick="showForm('studentForm', 'student-card')">For Students</a>
+        <a href="#" onclick="showForm('companyForm', 'company-card')">For Companies</a>
+        <a href="index.html">Home</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <p>Connecting Students and Companies — Online and Effortlessly</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="pics/annie-spratt-QckxruozjRg-unsplash.jpg" alt="Students connecting with companies"/>
+      <h2>Find Your Perfect Attachment</h2>
+      <p>Discover internships, apply online, and build your future — all in one place.</p>
+      <button onclick="goToOpportunities()">Browse Opportunities</button>
+    </section>
+
+    <section class="features">
+      <div class="feature-card" id="student-card">
+        <div class="card-content">
+          <img src="./pics/mark 2-harlynking-64grc3AMrH8-unsplash.jpg" alt="For Students" onclick="showForm('studentForm', 'student-card')" style="cursor: pointer;">
+          <h3>For Students</h3>
+          <p>Create a profile, upload your CV, and get matched with opportunities.</p>
+        </div>
+        <!-- Hidden Student Form -->
+        <section id="studentForm" class="form-section" style="display: none;">
+          <button class="close-btn" onclick="hideForm('student-card')">×</button>
+          <h2>Student Application Form</h2>
+          <form id="studentProfileForm">
+            <label>Name:
+              <input type="text" name="name" required>
+            </label>
+            <label>Email:
+              <input type="email" name="email" required>
+            </label>
+            <label>Phone Number:
+              <input type="tel" name="phone" required>
+            </label>
+            <label>Skill / Profession:
+              <input type="text" name="skill" placeholder="e.g. Web Development" required>
+            </label>
+            <label>Upload CV:
+              <input type="file" accept=".pdf,.doc,.docx" required>
+            </label>
+            <label>Other Documents:
+              <input type="file" multiple>
+            </label>
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+      </div>
+
+      <div class="feature-card" id="company-card">
+        <div class="card-content">
+          <img src=".//pics/lycs-architecture-U2BI3GMnSSE-unsplash.jpg" alt="For Companies" onclick="showForm('companyForm', 'company-card')" style="cursor: pointer;">
+          <h3>For Companies</h3>
+          <p>Post internships, browse student profiles, and connect effortlessly.</p>
+        </div>
+        <!-- Hidden Company Form -->
+        <section id="companyForm" class="form-section" style="display: none;">
+          <button class="close-btn" onclick="hideForm('company-card')">×</button>
+          <h2>Company Internship Form</h2>
+          <form id="companyProfileForm">
+            <label>Company Name:
+              <input type="text" name="companyName" required>
+            </label>
+            <label>Contact Email:
+              <input type="email" name="email" required>
+            </label>
+            <label>Phone Number:
+              <input type="tel" name="phone" required>
+            </label>
+            <label>Skills Required:
+              <input type="text" name="skills" placeholder="e.g. Web Development, Marketing" required>
+            </label>
+            <label>Slot Duration:
+              <input type="text" name="duration" placeholder="e.g. 3 months" required>
+            </label>
+            <label>Location:
+              <input type="text" name="location" required>
+            </label>
+            <button type="submit">Save & Go to Dashboard</button>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AttachLink. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

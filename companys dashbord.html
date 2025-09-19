@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AttachLink – Company Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Company Dashboard</h1>
+      <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="opportunities.html">Opportunities</a>
+      </nav>
+    </div>
+    <p>Post and manage your internship opportunities</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Post an Opportunity</h2>
+      <form id="opportunityForm">
+        <label>Opportunity Title:
+          <input type="text" name="title" required>
+        </label>
+        <label>Required Skill:
+          <input type="text" name="skill" required>
+        </label>
+        <label>Description:
+          <input type="text" name="description" required>
+        </label>
+        <label>Duration:
+          <input type="text" name="duration" required>
+        </label>
+        <label>Location:
+          <input type="text" name="location" required>
+        </label>
+        <button type="submit">Post Opportunity</button>
+      </form>
+    </section>
+
+    <section class="opportunities-list" id="companyOpportunities">
+      <h2>Your Posted Opportunities</h2>
+      <!-- Posted jobs will show here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AttachLink. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
